@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_motion_scene_scene"
+    app:motionDebug="NO_DEBUG"
+    tools:context=".MotionSceneActivity">
+
+    <Button
+        android:id="@+id/activateAnimationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/activateAnimationButton"
+        android:textColor="#000000"
+        android:backgroundTint="#30FFBD"
+        android:textSize="24sp"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

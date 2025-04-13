@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JordiSeguí_AngelAraque_Animations</string>
+    <string name="title">JordiSeguí + AngelAraque\nAnimations</string>
+    <string name="buttonToAct2">A LA 2NDA ACT</string>
+    <string name="activateAnimationButton">Activar Motion Scene</string>
+    <string name="movingButton">Movimiento Lateral</string>
+    <string name="spinningButton">Gira gira gira gira</string>
 </resources>

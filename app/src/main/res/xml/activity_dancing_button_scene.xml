@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!-- Moving Button -->
+    <Transition
+        android:id="@+id/buttonMovementTransition"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="easeInOut">
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/movingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="355dp"
+            motion:layout_constraintStart_toStartOf="@id/guidelineStart"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/movingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="355dp"
+            motion:layout_constraintStart_toEndOf="@id/guidelineEnd"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <!-- Spinning Button -->
+    <Transition
+        android:id="@+id/spinningTransition"
+        motion:constraintSetEnd="@+id/endSpin"
+        motion:constraintSetStart="@id/startSpin"
+        motion:duration="3000"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="linear">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@id/spinningButton"
+                motion:framePosition="100"
+                android:rotation="360" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/startSpin">
+        <Constraint
+            android:id="@+id/spinningButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:rotation="0"
+            motion:layout_constraintStart_toStartOf="@id/guidelineMid"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/endSpin">
+        <Constraint
+            android:id="@+id/spinningButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:rotation="360"
+            motion:layout_constraintStart_toStartOf="@id/guidelineMid"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+</MotionScene>
